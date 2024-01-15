@@ -1,0 +1,328 @@
+* {
+    margin: 0px;
+    padding: 0px 0px 0px 0px;
+    font-size: 100%;
+    font-weight: normal;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+}
+
+/* animation */
+
+@keyframes h1StripOff{
+    from {
+        color: rgba(255, 255, 255, 0.7);;
+    }
+    90%{
+        color: black;
+    }
+    to {
+        color: black;
+    }
+}
+
+/* /* iphone start */
+.iphone{
+    margin: 0 auto;
+    display: flex;
+    width: 50vh;
+    height: 100vh;
+    position: relative;
+   
+}
+
+.box-img{
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.box-img img{
+    object-position: center;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.on-off{
+    position: absolute;
+    z-index: 1000;
+    width: 2%;
+    height: 12%;
+    background-color: rgb(58, 83, 83);
+    left: 98.5%;
+    top: 30%;
+    cursor: pointer;
+}
+
+
+.sound-up{
+    position: absolute;
+    z-index: 1000;
+    width: 2%;
+    height: 8%;
+    background-color: rgb(58, 83, 83);
+    left: 0%;
+    top: 27%;
+    cursor: pointer;
+}
+
+.sound-dawn{
+    position: absolute;
+    z-index: 1000;
+    width: 2%;
+    height: 8%;
+    background-color: rgb(58, 83, 83);
+    left: 0%;
+    top: 36.5%;
+    cursor: pointer;
+}
+
+.silent-mode{
+    position: absolute;
+    z-index: 1000;
+    width: 2%;
+    height: 4%;
+    background-color: rgb(58, 83, 83);
+    left: 0%;
+    top: 20%;
+    cursor: pointer;
+}
+
+
+/* iphone work */
+
+.platform{
+    position: relative;
+    overflow: hidden;
+    margin: auto;
+    width: 88%;
+    height: 93%;
+    z-index: 1;
+    border-radius: 5vh;
+    background: url(../img/desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: opacity .1s;
+}
+
+.screen{
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    border-radius: 5vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* island  */
+
+.island{
+    z-index: 2;
+    position: relative;
+    display: flex;
+    margin: auto;
+    width: 100%;
+    height: 4.3%;
+    border-radius: 5vh;
+    align-items: center;
+}
+
+.island #time{
+    text-align: center;
+    width: 30%;
+    font-size: 2vh;
+    color: aliceblue;
+}
+
+.island .box{
+    position: absolute;
+    left: 77%;
+    display: flex;
+    width: 18%;
+    align-items: center;
+    gap: 7%;
+}
+
+.box .networkStatus{
+    width: 30%;
+}
+
+.box .wiFi{
+    width: 30%;
+}
+
+.networkStatus img{
+    width: 100%;
+    display: block;
+}
+
+.wiFi img{
+    width: 100%;
+    display: block;
+}
+
+.box-battery{
+    position: relative;
+    width: 50%;
+    height: 1.5vh;
+    border: 0.5px solid;
+    border-radius: 1vh;
+}
+
+.box-battery #battery{
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 1.3vh;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: 0.5px solid;
+    border-radius: 1vh;
+    background-color: rgb(245, 134, 9);
+}
+
+/* create face-id */
+
+.face-id{
+    z-index: 1000;
+    top: 3.5%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-bottom-right-radius: 17px;
+    border-bottom-left-radius: 17px;
+    width: 45%;
+    height: 4%;
+    background-color: rgb(23, 22, 22);
+}
+
+
+/* iphone srceenOff && stripOff */
+
+#offScreenOff{
+    transition: opacity .3s ease-in-out;
+}
+
+#offScreenOff::before,
+#offScreenOff::after {
+    content: ""; 
+    position: absolute;
+    top: 49%;
+    left: 30%; 
+    width: 40%;
+    height: 5%; 
+    background: rgb(128, 128, 128);
+}
+
+#offScreenOff::before {
+    transform: rotate(45deg);
+}
+
+#offScreenOff::after {
+    transform: rotate(-45deg);
+}
+
+#offScreenOff:hover{
+    opacity: .7;
+}
+
+/* locked screen */
+
+.locked-screen{
+    position: absolute;
+    top: 0%;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 5vh;
+    border-bottom-left-radius: 5vh;
+    border-bottom-right-radius: 5vh;
+    transition: height .1s;
+    overflow: hidden;
+    background: url(../img/desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: 52.5vh;
+}
+
+.locked-screen .box-dataDayTime{
+    position: absolute;
+    top: 8%;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.box-dataDayTime #dateDay{
+    text-align: center;
+    font-size: 3.2vh;
+    line-height: 4vh;
+    color: aliceblue;
+}
+
+.box-dataDayTime #time{
+    text-align: center;
+    width: 50%;
+    font-size: 8vh;
+    margin: 0 auto;
+    color: aliceblue;
+}
+
+.locked-screen_icons{
+    position: absolute;
+    top: 84%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 6%;
+    display: flex;
+    justify-content: space-around;
+    transition: opacity .5s;
+}
+
+.locked-screen_icons .flashlight,
+.locked-screen_icons .camera{
+    border-radius: 100%;
+    width: 13%;
+    background-color: rgba(141, 140, 140, 0.6);
+    display: flex;
+}
+
+.flashlight img,
+.camera img{
+    margin: auto;
+    display: block;
+    width: 45%;
+}
+
+
+.line-unlock{
+    position: absolute;
+    top: 95%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 40%;
+    height: .5%;
+    background-color:aliceblue;
+    border-radius: 5vh;
+    transition: background-color .6s;
+}
+
+.line-unlock:hover{
+    background-color: rgb(186, 188, 189);
+}
+
+
+
+
+.locked-screen{
+    display: none;
+}
+
+
