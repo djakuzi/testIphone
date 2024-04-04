@@ -2,11 +2,11 @@ let carousel = document.querySelector('.carousel'),
 desktop = document.querySelector(".desktop"),
 coordDesktop = desktop.getBoundingClientRect() // coord desktop
 
+
 carousel.addEventListener('pointerenter',function(){
 
     carousel.addEventListener('pointerdown', function(event){
 
-        let startTime = new Date().getTime()
 
         goMoveDes(event)
 
@@ -36,6 +36,7 @@ carousel.addEventListener('onclick',function(event){
 
 
 function goMoveDes(event){
+
     event.preventDefault()
 
     let qIcons = document.querySelectorAll('.carousel .icons').length
@@ -58,7 +59,7 @@ function goMoveDes(event){
             let moveX = event.clientX - coordDesktop.left
             let resTranslate = Math.min((translate - (startX - moveX)),0)
 
-            check.innerHTML = sumXForSwipe +  ' '+ width/4
+            // check.innerHTML = sumXForSwipe +  ' '+ width/4
 
             carousel.style.translate = resTranslate + 'px'
 

@@ -12,6 +12,7 @@
    flex-direction: column;
    height: 90%;
    translate: 0px;
+    transition: all .07s ease;
 }
 
 .carousel .icons{

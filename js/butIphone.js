@@ -69,6 +69,7 @@ onOff.onpointerup = function(){
             transition: opacity .4s;
             border-radius: 5vh;
             backdrop-filter: blur(12px);
+            z-index: 100;
             `; //css-style for screenOff
 
             screenOff.innerHTML = '<div id="stripOff"> <h1> Выключите </h1> </div> <div id="offScreenOff"></div> <h1 id="textScreenOff">Отменить</h1>'
